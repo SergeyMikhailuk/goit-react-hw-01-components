@@ -1,17 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import style from './Statistics.module.css'
+
+const colors = ["#4fc4f6", "#a33cf2", "#e64c65", "#21b8c6", "#21c67e",]
+
+
 
 const Statistics = ({ title, stats }) => {
   return (
-    <section className="statistics">
-      <h2 className="title">{title}</h2>
+    <section className={style.statistics}>
+      <h2 className={style.title}>{title.toUpperCase()}</h2>
 
-      <ul className="stat-list">
-        {stats.map(stat => {
+      <ul className={style.list}>
+        {stats.map((stat, index) => {
           return (
-            <li className="item" key={stat.id}>
-              <span className="label">{stat.label}</span>
-              <span className="percentage">{stat.percentage}%</span>
+            <li className={style.item} key={stat.id} style={{ backgroundColor: colors[index] }}>
+              <span className={style.label}>{stat.label}</span>
+              <span className={style.percentage}>{stat.percentage}%</span>
             </li>
           )
         })}
