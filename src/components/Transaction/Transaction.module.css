@@ -23,12 +23,3 @@
   transition: all 0.5s ease;
 }
 
-.transaction_history tbody:hover td {
-  color: transparent;
-  text-shadow: 0 0 3px #a09f9d;
-}
-
-.transaction_history tbody:hover tr:hover td {
-  color: #444444;
-  text-shadow: none;
-}
